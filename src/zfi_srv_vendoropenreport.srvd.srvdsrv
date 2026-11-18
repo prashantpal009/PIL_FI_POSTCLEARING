@@ -1,0 +1,13 @@
+@EndUserText.label: 'Service Defination for VendorOpenReport'
+define service ZFI_Srv_VendorOpenReport {
+  expose ZFI_VendorOpenReport;
+  expose ZCDS_Comp_AccountVH;
+  expose ZOpenVendorVH;
+  expose ZCDS_ProfitCenterVH;
+  expose ZCDS_C_VendorPayment as VendorPayment;
+  expose ZVH_APPROVAL1;
+  expose ZVH_APPROVAL2;
+  expose ZVH_SendPayment;
+  expose ZVH_InvoicePosting;
+  expose ZVH_ApprovalReport;
+}

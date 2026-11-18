@@ -1,0 +1,108 @@
+managed implementation in class zbp_cds_vendor_paymentrap unique;
+strict ( 2 );
+
+define behavior for ZCDS_Vendor_PaymentRAP
+persistent table zvendor_payment
+lock master
+authorization master ( instance )
+etag master LocalLastChangedAt
+{
+  create ( authorization : global );
+  update;
+  delete;
+
+  field ( numbering : managed, readonly ) db_key;
+
+  field ( readonly ) CreatedBy, CreatedAt, LastChangedBy,
+  LastChangedAt, LocalLastChangedAt;
+
+  field ( mandatory ) CompanyCode, Supplier, TransactionCurrency,
+  InvoiceDate, InvoiceValue;
+
+  determination setDefaultValues on modify { create; }
+
+  action ( features : instance ) approveProposal result [1] $self;
+  action ( features : instance ) rejectProposal result [1] $self;
+  action ( features : instance ) approve2Proposal result [1] $self;
+  action ( features : instance ) reject2Proposal result [1] $self;
+//  action ( features : instance ) InvoicePosting result [1] $self;
+
+  mapping for zvendor_payment
+    {
+      Db_Key                    = db_key;
+      IdNo                      = id_no;
+      CompanyCode               = company_code;
+      JournalEntry              = journal_entry;
+      InvoiceReference          = invoice_reference;
+      InvoiceReferenceFiscalYear = invoice_referencefiscleyear;
+      OriginalReferenceDocument = originalreference_document ;
+      JournalEntryType          = journal_entry_type;
+      Supplier                  = supplier;
+      SupplierName              = supplier_name;
+      FiscalYear                = fiscal_year;
+      FiscalPeriod              = fiscal_period;
+      IndustryType              = industry_type;
+      AssignmentReference       = assignmentreference;
+      InvoiceDate               = invoice_date;
+      PostingDate               = posting_date;
+      PaymentDays               = payment_days;
+      InvoiceNo                 = invoice_no;
+      TransactionCurrency       = transaction_currency;
+      Currency                  = currency;
+      SpecialGLCode             = speciaglcode;
+      InvoiceValue              = invoice_value;
+      HouseBank                 = house_bank;
+      HouseBankAccount          = house_bank_account;
+      GlAccount                 = gl_account;
+      BankProfitCenter          = bank_profit_center;
+      AmountAlreadyPaid         = amount_already_paid;
+      BalanceToBePaid           = balance_to_be_paid;
+      AmountProposal            = amount_proposal;
+      Rate                      = rate;
+      ProfitCenter              = profit_center;
+      InvoiceDocNumber          = invoice_doc_number;
+      PoHistoryDocItem          = po_history_doc_item;
+      PoDocumentDate            = po_document_date;
+      PoPostingDate             = po_posting_date;
+      Material                  = material;
+      MaterialName  = materialname;
+      MaterialType              = material_type;
+      PoQtyUnit                 = po_qty_unit;
+      PoQty                     = po_qty;
+      InvoiceValuePo            = invoice_value_po;
+      NetPriceAmount            = net_price_amount;
+      PurchaseOrder             = purchase_order;
+      ActualBilledQty           = actual_billed_qty;
+      GrnNumber                 = grn_number;
+      Batch                     = batch;
+      GrnQuantity               = grn_quantity;
+      ConsumptionQuantity       = consumption_quantity;
+      BalanceQuantity           = balance_quantity;
+      ConsumptionPercentage     = consumption_percentage;
+      Price                     = price;
+      ProposalStatus            = proposal_status;
+      Approval1Status           = approval1_status;
+      Approval1User             = approval1_user;
+      Approval1On               = approval1_on;
+      Approval1Time             = approval1_time;
+      Approval2Status           = approval2_status;
+      Approval2User             = approval2_user;
+      Approval2On               = approval2_on;
+      Approval2Time             = approval2_time;
+      TransactionId             = transactionid;
+      PaymentStatus             = payment_status;
+      UTRNumber                 = utrnumber;
+      PostingDocument           = postingdocument;
+      PostStatus                = post_status;
+      PostingError              = postingerror;
+      ClearingAcctgDocument     = clearing_acctg_document;
+      ClearingDocYear           = clearing_doc_year;
+      ClearingError             = clearingerror;
+      CreatedBy                 = created_by;
+      CreatedAt                 = created_at;
+      LastChangedBy             = last_changed_by;
+      LastChangedAt             = last_changed_at;
+      LocalLastChangedAt        = local_last_changed_at;
+    }
+
+}

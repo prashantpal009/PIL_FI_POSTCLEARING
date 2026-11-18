@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "ZF110"
+  },
+  "ui5AppDetails": {
+    "appId": "zf110"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_B9041F9AA84ED46828849597A76A4C819403C7EC_TM",
+    "semanticObject": "zf110",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_B9041F9AA84ED46828849597A76A4C819403C7EC_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "ZF110",
+        "subtitle": "Vendor Payment Process"
+      }
+    }
+  ]
+}

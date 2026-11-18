@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Report For Bank Approval 2.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Bank Approval2"
+  },
+  "ui5AppDetails": {
+    "appId": "zpostingapprovalreport"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_9ABDEF582363CF0EBAC63F714D0F5CD0CC814E92_TM",
+    "semanticObject": "zpostapproval2",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_9ABDEF582363CF0EBAC63F714D0F5CD0CC814E92_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Bank Approval2",
+        "subtitle": "Report For Bank Approval 2"
+      }
+    }
+  ]
+}

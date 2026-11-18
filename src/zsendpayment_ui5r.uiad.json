@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Send Vendor Payment"
+  },
+  "ui5AppDetails": {
+    "appId": "zsendbankpayment"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_5588C7D862ACF2005589AC52A9A07D14F235A41C_TM",
+    "semanticObject": "zsendbankpayment",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_5588C7D862ACF2005589AC52A9A07D14F235A41C_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Send Vendor Payment",
+        "subtitle": "Tile for sending bank payments"
+      }
+    }
+  ]
+}

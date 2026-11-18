@@ -1,0 +1,21 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "HDFC Bank Payment Inquiry Job",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "className": "ZCL_BANK_INQUIRY"
+  },
+  "parameters": [
+    {
+      "name": "P_TXNID",
+      "readOnly": true
+    },
+    {
+      "name": "P_DATE",
+      "readOnly": true
+    }
+  ]
+}
